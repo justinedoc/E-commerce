@@ -70,6 +70,11 @@ p {
   border-radius: 50%;
 }
 
+.remove-item {
+  cursor: pointer;
+  color: #088178;
+}
+
 button.normal {
   font-size: 15px;
   font-weight: 600px;
