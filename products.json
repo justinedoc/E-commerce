@@ -1,0 +1,69 @@
+{
+  "shopProducts": [
+    {
+      "name": "All t-Shirts & Accessories",
+      "img": "img/products/f1.jpg",
+      "brand": "adidas",
+      "price": 78,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder, and a seemless double-needed collar, and avaliable in a range of colors, it offers it all in the ultimate head-turning package."
+    },
+
+    {
+      "name": "Test Product",
+      "img": "img/products/f2.jpg",
+      "brand": "louis vitton",
+      "price": 100,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    },
+
+    {
+      "name": "Still A Test",
+      "img": "img/products/f3.jpg",
+      "brand": "vitton",
+      "price": 130,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    },
+
+    {
+      "name": "Cartoon T-shirt",
+      "img": "img/products/f4.jpg",
+      "brand": "louis vitton",
+      "price": 150,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    }
+  ],
+
+  "featuredProducts": [
+    {
+      "name": "All t-Shirts & Accessories",
+      "img": "img/products/f1.jpg",
+      "brand": "adidas",
+      "price": 78,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder, and a seemless double-needed collar, and avaliable in a range of colors, it offers it all in the ultimate head-turning package."
+    },
+
+    {
+      "name": "Cartoon T-shirt",
+      "img": "img/products/f2.jpg",
+      "brand": "louis vitton",
+      "price": 100,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    },
+
+    {
+      "name": "Cartoon T-shirt",
+      "img": "img/products/f3.jpg",
+      "brand": "vitton",
+      "price": 130,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    },
+
+    {
+      "name": "Cartoon T-shirt",
+      "img": "img/products/f4.jpg",
+      "brand": "louis vitton",
+      "price": 150,
+      "description": "The Gildan Ultra Cotton T-shirt is made from a substantial 6.0 cotton 6.0 oz. per sq. yd. fabric constructed from 100% cotton, this classic fit preshrunk jersey knit provides umatched comfort with each wear. Featuring a taped neck and shoulder,."
+    }
+  ]
+}

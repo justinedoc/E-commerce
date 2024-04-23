@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Site</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script
+      src="https://kit.fontawesome.com/c76b9e77b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header section -->
+
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <div class="icon-box">
+            <li id="lg-bag">
+              <a href="#" class="cartBtn"
+                ><i class="fa-solid fa-bag-shopping"></i>
+                <span class="number-items">0</span>
+              </a>
+            </li>
+          </div>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+
+      <div id="mobile">
+        <a href="#" class="cartBtn"><i class="fa-solid fa-bag-shopping"></i></a>
+
+        <i id="bar" class="fa-solid fa-outdent"></i>
+      </div>
+
+      <section id="cart" class="section-p1">
+        <table width="100%">
+          <ion-icon class="closeWishBtn" name="close-outline"></ion-icon>
+          <thead>
+            <tr>
+              <td>Remove</td>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Price</td>
+            </tr>
+          </thead>
+
+          <tbody class="cart-main">
+            <template>
+              <tr>
+                <td>
+                  <a href=""><i class="fa fa-times-circle"></i></a>
+                </td>
+                <td><img src="img/products/f1.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href=""><i class="fa fa-times-circle"></i></a>
+                </td>
+                <td><img src="img/products/f3.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href=""><i class="fa fa-times-circle"></i></a>
+                </td>
+                <td><img src="img/products/f2.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <!-- hero section -->
+    <section id="hero">
+      <h4>Trade-in-offer</h4>
+      <h2>Super value deals</h2>
+      <h1>On all products</h1>
+      <p>Save more with coupons & up to 70% off!</p>
+      <button onclick="window.location.href='shop.html'">Shop Now</button>
+    </section>
+
+    <!-- features section -->
+
+    <section id="feature" class="section-p1">
+      <div class="feature-box">
+        <img src="img/features/f1.png" alt="" />
+        <h6>Free Shipping</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f3.png" alt="" />
+        <h6>Save Money</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f4.png" alt="" />
+        <h6>Promotions</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f5.png" alt="" />
+        <h6>Happy Sell</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f1.png" alt="" />
+        <h6>F24/7 Support</h6>
+      </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>Featured Product</h2>
+      <p>Summer Collection New Modern Design</p>
+
+      <div class="product-container" id="featuredPro">
+        <template>
+          <div class="product">
+            <img class="img" src="img/products/f1.jpg" alt="" />
+            <div class="description">
+              <span>adidas</span>
+              <h5 class="name">Cartoon onaut T-Shirts</h5>
+              <div class="star">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+              <div class="psec">
+                <h4>$</h4>
+                <h4 class="price">78</h4>
+              </div>
+            </div>
+            <a href="#"
+              ><ion-icon
+                name="cart-outline"
+                aria-hidden="true"
+                class="cart"
+              ></ion-icon
+            ></a>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+      <h4>Repair service</h4>
+      <h2>Up To <span>70% Off</span> - All t-Shirts & Accessories</h2>
+      <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>New Arrivals</h2>
+      <p>Summer Collection New Modern Design</p>
+
+      <!--  -->
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+      <div class="banner-box">
+        <h4>crazy deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>the best classic dress on sale at cara</span>
+        <button>Learn More</button>
+      </div>
+      <div class="banner-box banner-box2">
+        <h4>Summer</h4>
+        <h2>upcoming season</h2>
+        <span>the best classic dress on sale at cara</span>
+        <button>Collection</button>
+      </div>
+    </section>
+
+    <section id="banner3">
+      <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% Off</h3>
+      </div>
+      <div class="banner-box banner-box2">
+        <h2>NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring / Summer 2022</h3>
+      </div>
+      <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our latest shop and
+          <span>special offers.</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email Address" required />
+        <button class="normal">Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img src="img/logo.png" alt="" class="logo" />
+        <h4>Contact</h4>
+        <p><strong>Address :</strong> London United Kingdom</p>
+        <p><strong>Phone :</strong> +44 4382 8272/ (+234) 7049460846</p>
+        <p><strong>Hours :</strong> All weekdays Mon - Sat</p>
+
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">Veiw Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="img/pay/app.jpg" alt="" />
+          <img src="img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Immortalconzults</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
