@@ -48,52 +48,19 @@
       </div>
 
       <section id="cart" class="section-p1">
-        <table width="100%">
-          <ion-icon class="closeWishBtn" name="close-outline"></ion-icon>
-          <thead>
-            <tr>
-              <td>Remove</td>
-              <td>Image</td>
-              <td>Product</td>
-              <td>Price</td>
-            </tr>
-          </thead>
-
-          <tbody class="cart-main">
-            <template>
-              <tr>
-                <td>
-                  <a href=""><i class="fa fa-times-circle"></i></a>
-                </td>
-                <td><img src="img/products/f1.jpg" alt="" /></td>
-                <td>Cartoon Astronaut T-Shirts</td>
-                <td>$118.19</td>
-                <td><input type="number" value="1" /></td>
-                <td>$118.19</td>
-              </tr>
-              <tr>
-                <td>
-                  <a href=""><i class="fa fa-times-circle"></i></a>
-                </td>
-                <td><img src="img/products/f3.jpg" alt="" /></td>
-                <td>Cartoon Astronaut T-Shirts</td>
-                <td>$118.19</td>
-                <td><input type="number" value="1" /></td>
-                <td>$118.19</td>
-              </tr>
-              <tr>
-                <td>
-                  <a href=""><i class="fa fa-times-circle"></i></a>
-                </td>
-                <td><img src="img/products/f2.jpg" alt="" /></td>
-                <td>Cartoon Astronaut T-Shirts</td>
-                <td>$118.19</td>
-                <td><input type="number" value="1" /></td>
-                <td>$118.19</td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
+        <i class="fa-solid fa-x closeWishBtn"></i>
+        <div class="wish-items">
+          <template>
+            <div class="item">
+              <i class="fa fa-times-circle remove-item"></i>
+              <img src="img/products/f1.jpg" alt="" />
+              <div class="des">
+                <h4 class="item-name">test tshirt</h4>
+                <h6 class="price">$200</h6>
+              </div>
+            </div>
+          </template>
+        </div>
       </section>
     </section>
 
@@ -173,7 +140,9 @@
     <section id="banner" class="section-m1">
       <h4>Repair service</h4>
       <h2>Up To <span>70% Off</span> - All t-Shirts & Accessories</h2>
-      <button class="normal">Explore More</button>
+      <button class="normal" onclick="window.location.href='shop.html'">
+        Explore More
+      </button>
     </section>
 
     <section id="product1" class="section-p1">

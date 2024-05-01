@@ -65,21 +65,21 @@ const addShopPro = () => {
 
         const products = document.querySelectorAll(".img");
         displayPro(products, data);
-        const mainCartEl = document.querySelector(".cart-main");
+        const mainCartEl = document.querySelector(".wish-items");
         const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
         for (let b = 0; b < addToCartBtn.length; b++) {
           addToCartBtn[b].addEventListener("click", (event) => {
             event.preventDefault();
-
+            console.log("clicked");
             mainCartEl.innerHTML += `
-                <tr class="item">
-                  <td>
-                    <i class="fa fa-times-circle remove-item"></i>
-                  </td>
-                  <td><img src="${data.shopProducts[b].img}" alt="" /></td>
-                  <td>${data.shopProducts[b].name}</td>
-                  <td>$${data.shopProducts[b].price}</td>
-                </tr>`;
+              <div class="item">
+              <i class="fa fa-times-circle remove-item"></i>
+              <img src="${data.featuredProducts[b].img}" alt="" />
+              <div class="des">
+                <h4 class="item-name">${data.featuredProducts[b].name}</h4>
+                <h6 class="price">$${data.featuredProducts[b].price}</h6>
+              </div>
+            </div>`;
             const removeItem = document.querySelectorAll(".remove-item");
             wishNo();
             removeItemsFromWish(removeItem);
@@ -97,8 +97,8 @@ const addShopPro = () => {
               let des = pName[i].parentElement;
               des.parentElement.style.display = "block";
             } else {
-                let des = pName[i].parentElement;
-                des.parentElement.style.setProperty('display', 'none');
+              let des = pName[i].parentElement;
+              des.parentElement.style.setProperty("display", "none");
             }
           }
         });
@@ -181,19 +181,19 @@ const displayPro = (products, data) => {
 
       const addToWishBtn = document.querySelector(".wishBtn");
       addToWishBtn.addEventListener("click", () => {
-        const mainCartEl = document.querySelector(".cart-main");
+        const mainCartEl = document.querySelector(".wish-items");
         mainCartEl.innerHTML += `
-            <tr class="item">
-                <td>
-                <i class="fa fa-times-circle remove-item"></i>
-                </td>
-                <td><img src="${data.shopProducts[a].img}" alt="" /></td>
-                <td>${data.shopProducts[a].name}</td>
-                <td>$${data.shopProducts[a].price}</td>
-            </tr>`;
+        <div class="item">
+        <i class="fa fa-times-circle remove-item"></i>
+        <img src="${data.featuredProducts[b].img}" alt="" />
+        <div class="des">
+          <h4 class="item-name">${data.featuredProducts[b].name}</h4>
+          <h6 class="price">$${data.featuredProducts[b].price}</h6>
+        </div>
+      </div>`;
         const removeItem = document.querySelectorAll(".remove-item");
-        removeItemsFromWish(removeItem);
         wishNo();
+        removeItemsFromWish(removeItem);
       });
     });
   }
@@ -202,15 +202,14 @@ const displayPro = (products, data) => {
 const wishNo = () => {
   const numberOfItems = document.querySelector(".number-items");
   const items = document.querySelectorAll(".item");
-  console.log(items.length);
   numberOfItems.textContent = items.length;
 };
 
 const removeItemsFromWish = (ItemBtn) => {
   for (let q = 0; q < ItemBtn.length; q++) {
     ItemBtn[q].addEventListener("click", () => {
-      const td = ItemBtn[q].parentElement;
-      td.parentElement.remove();
+      const item = ItemBtn[q].parentElement;
+      item.remove();
       wishNo();
     });
   }

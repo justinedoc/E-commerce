@@ -972,95 +972,60 @@ footer .copyright {
 /* cart page  */
 
 #cart {
-  overflow-x: auto;
   position: fixed;
-  width: 100%;
+  width: 350px;
   height: 100vh;
-  background: #e1e1e1d7;
-  top: -200%;
-  left: 0;
-  backdrop-filter: blur(3px);
+  background: #e1e1e1ee;
+  top: 0;
+  right: -100%;
+  backdrop-filter: blur(5px);
   transition: 0.5s ease;
 }
 
-#cart::-webkit-scrollbar {
-  height: 6px;
-}
-
-#cart::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 50px;
-}
-
 #cart.clicked {
-  top: 0;
+  right: 0;
 }
 
-#cart table {
-  width: 100%;
+#cart .item {
+  width:300px;
+  height: 80px;
+  border-top: 1px solid #088178;
   border-collapse: collapse;
-  table-layout: fixed;
-  white-space: nowrap;
-  margin-top: 30px;
-  position: relative;
-}
-
-#cart .closeWishBtn {
-  font-size: 35px;
-  position: sticky;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   cursor: pointer;
 }
 
-#cart table img {
-  width: 70px;
+#cart .item img {
+ height: 100%;
 }
 
-#cart table td:nth-child(1) {
-  width: 100px;
-  text-align: center;
+#cart .item .des {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-#cart table td:nth-child(2) {
-  width: 150px;
-  text-align: center;
+#cart .item h4 {
+  text-transform: capitalize;
+  font-size: 17px;
 }
 
-#cart table td:nth-child(3) {
-  width: 250px;
-  text-align: center;
+#cart .item h6 {
+  color: #088178;
 }
 
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6) {
-  width: 150px;
-  text-align: center;
+#cart .closeWishBtn {
+  padding: 10px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#cart table td:nth-child(5) input {
-  width: 70px;
-  padding: 10px 5px 10px 15px;
-}
-
-#cart table thead {
-  border: 1px solid #000000;
-  border-left: none;
-  border-right: none;
-}
-
-#cart table thead td {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 18px 0;
-}
-
-#cart table tbody tr td {
-  padding-top: 15px;
-}
-
-#cart table tbody td {
-  font-size: 13px;
+#cart .remove-item {
+  margin-right: 20px;
 }
 
 #cart-add {

@@ -67,22 +67,21 @@ const addPro = () => {
 
         const products = document.querySelectorAll(".img");
         displayPro(products, data);
-        const mainCartEl = document.querySelector(".cart-main");
+        const mainCartEl = document.querySelector(".wish-items");
         const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
         for (let b = 0; b < addToCartBtn.length; b++) {
           addToCartBtn[b].addEventListener("click", (event) => {
             event.preventDefault();
             console.log("clicked");
             mainCartEl.innerHTML += `
-            <tr class="item">
-                <td>
-                  <i class="fa fa-times-circle remove-item"></i>
-                </td>
-                <td><img src="${data.featuredProducts[b].img}" alt="" /></td>
-                <td>${data.featuredProducts[b].name}</td>
-                <td>$${data.featuredProducts[b].price}</td>
-              </tr>
-            <tr>`;
+            <div class="item">
+            <i class="fa fa-times-circle remove-item"></i>
+            <img src="${data.featuredProducts[b].img}" alt="" />
+            <div class="des">
+              <h4 class="item-name">${data.featuredProducts[b].name}</h4>
+              <h6 class="price">$${data.featuredProducts[b].price}</h6>
+            </div>
+          </div>`;
             const removeItem = document.querySelectorAll(".remove-item");
             wishNo();
             removeItemsFromWish(removeItem);
@@ -112,8 +111,8 @@ const removeItemsFromWish = (ItemBtn) => {
   for (let q = 0; q < ItemBtn.length; q++) {
     ItemBtn[q].addEventListener("click", (event) => {
       event.preventDefault();
-      const td = ItemBtn[q].parentElement;
-      td.parentElement.remove();
+      const item = ItemBtn[q].parentElement;
+      item.remove();
       wishNo();
     });
   }
