@@ -21,7 +21,8 @@ const closeCartBtn = document.querySelector(".closeWishBtn");
 const cartEl = document.getElementById("cart");
 
 for (let i = 0; i < openCartBtn.length; i++) {
-  openCartBtn[i].addEventListener("click", () => {
+  openCartBtn[i].addEventListener("click", (event) => {
+    event.preventDefault();
     cartEl.classList.add("clicked");
   });
 }
@@ -111,5 +112,3 @@ const removeItemsFromWish = (ItemBtn) => {
     });
   }
 };
-
-

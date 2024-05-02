@@ -398,6 +398,26 @@ body {
   transition: 300ms ease-in-out;
 }
 
+#product1 .product ion-icon.cart {
+  width: 4vh;
+  height: 4vh;
+  display: inline;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  font-size: 16px;
+  padding: 6px;
+  --ionicon-stroke-width: 40px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
 #product1 .product .cart:hover {
   background-color: #088178;
   color: #eee;
