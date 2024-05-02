@@ -327,6 +327,7 @@ body {
   margin: 15px 0;
   transition: 0.2s ease;
   position: relative;
+  border-radius: 20px;
 }
 
 .hidden {
@@ -341,6 +342,8 @@ body {
 #product1 .product img {
   width: 100%;
   border-radius: 20px;
+  height: 40vh;
+  object-fit: cover;
 }
 
 #product1 .product .description {
@@ -351,6 +354,7 @@ body {
 #product1 .product .description span {
   color: #606063;
   font-size: 12px;
+  text-transform: capitalize;
 }
 
 .psec {
@@ -378,11 +382,9 @@ body {
 }
 
 #product1 .product .cart {
-  width: 4vh;
-  height: 4vh;
-  display: inline;
-  line-height: 40px;
-  border-radius: 50px;
+  display: flex;
+  line-height: 20px;
+  border-radius: 6px;
   background-color: #e8f6ea;
   font-weight: 500;
   color: #088178;
@@ -392,7 +394,6 @@ body {
   right: 14px;
   font-size: 16px;
   padding: 6px;
-  --ionicon-stroke-width: 40px;
   cursor: pointer;
   transition: 300ms ease-in-out;
 }
@@ -699,7 +700,7 @@ footer .copyright {
 }
 
 #prodetails .single-pro-image {
-  width: 40%;
+  width: 30%;
   margin-right: 50px;
 }
 
@@ -711,6 +712,9 @@ footer .copyright {
 .small-img-col {
   flex-basis: 24%;
   cursor: pointer;
+  opacity: 0;
+  visibility: 0;
+  height: 0;
 }
 
 #prodetails .single-pro-details {

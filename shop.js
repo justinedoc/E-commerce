@@ -21,7 +21,8 @@ const closeCartBtn = document.querySelector(".closeWishBtn");
 const cartEl = document.getElementById("cart");
 
 for (let i = 0; i < openCartBtn.length; i++) {
-  openCartBtn[i].addEventListener("click", () => {
+  openCartBtn[i].addEventListener("click", (event) => {
+    event.preventDefault();
     cartEl.classList.add("clicked");
   });
 }
@@ -50,7 +51,7 @@ const addShopPro = () => {
                 <ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="psec">
-                <h4>$</h4>
+                <h4>€</h4>
                 <h4 class="price">${data.shopProducts[z].price}</h4>
               </div>
             </div>
@@ -74,10 +75,10 @@ const addShopPro = () => {
             mainCartEl.innerHTML += `
               <div class="item">
               <i class="fa fa-times-circle remove-item"></i>
-              <img src="${data.featuredProducts[b].img}" alt="" />
+              <img src="${data.shopProducts[b].img}" alt="" />
               <div class="des">
-                <h4 class="item-name">${data.featuredProducts[b].name}</h4>
-                <h6 class="price">$${data.featuredProducts[b].price}</h6>
+                <h4 class="item-name">${data.shopProducts[b].name}</h4>
+                <h6 class="price">€${data.shopProducts[b].price}</h6>
               </div>
             </div>`;
             const removeItem = document.querySelectorAll(".remove-item");
@@ -160,7 +161,7 @@ const displayPro = (products, data) => {
       <div class="single-pro-details">
         <h6>Home/ T-shirts</h6>
         <h4>${data.shopProducts[a].name}</h4>
-        <h2>$${data.shopProducts[a].price}</h2>
+        <h2>€${data.shopProducts[a].price}</h2>
 
         <select>
           <option>Select size</option>
@@ -171,33 +172,22 @@ const displayPro = (products, data) => {
         </select>
 
         <input type="number" value="1" disabled/>
-        <button class="normal wishBtn">Add to Wishlist</button>
+        <button class="normal" onclick="location.href='${data.shopProducts[a].affliateLink}'">Buy on Amazon</button>
         <h4>Product Details</h4>
         <span
           >${data.shopProducts[a].description}</span
         >
       </div>`;
       prodetails.style.setProperty("display", "flex");
-
-      const addToWishBtn = document.querySelector(".wishBtn");
-      addToWishBtn.addEventListener("click", () => {
-        const mainCartEl = document.querySelector(".wish-items");
-        mainCartEl.innerHTML += `
-        <div class="item">
-        <i class="fa fa-times-circle remove-item"></i>
-        <img src="${data.featuredProducts[b].img}" alt="" />
-        <div class="des">
-          <h4 class="item-name">${data.featuredProducts[b].name}</h4>
-          <h6 class="price">$${data.featuredProducts[b].price}</h6>
-        </div>
-      </div>`;
-        const removeItem = document.querySelectorAll(".remove-item");
-        wishNo();
-        removeItemsFromWish(removeItem);
-      });
     });
   }
 };
+
+const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", () => {
+  prodetails.innerHTML = "";
+  prodetails.style.setProperty("display", "none");
+});
 
 const wishNo = () => {
   const numberOfItems = document.querySelector(".number-items");

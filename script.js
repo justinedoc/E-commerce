@@ -56,13 +56,7 @@ const addPro = () => {
                 <h4 class="price">${data.featuredProducts[i].price}</h4>
               </div>
             </div>
-            <a class="add-to-cart-btn" href="#"
-              ><ion-icon
-                name="cart-outline"
-                aria-hidden="true"
-                class="cart"
-              ></ion-icon
-            ></a>
+            <button class="cart" onclick="location.href='${data.featuredProducts[i].affliateLink}'">Buy</button>
           </div>`;
 
         const products = document.querySelectorAll(".img");
