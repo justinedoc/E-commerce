@@ -383,6 +383,8 @@ body {
 
 #product1 .product .cart {
   display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 20px;
   border-radius: 6px;
   background-color: #e8f6ea;
