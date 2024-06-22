@@ -6,6 +6,7 @@
     <title>Fashion</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,40 +47,48 @@
         <i id="bar" class="fa-solid fa-outdent"></i>
       </div>
 
-      <section id="cart" class="section-p1">
-        <i class="fa-solid fa-x closeWishBtn"></i>
-        <div class="wish-items">
-          <template>
-            <div class="item">
-              <i class="fa fa-times-circle remove-item"></i>
-              <img src="img/products/f1.jpg" alt="" />
-              <div class="des">
-                <h4 class="item-name">test tshirt</h4>
-                <h6 class="price">$200</h6>
-              </div>
-            </div>
-          </template>
+      <div class="cart-main-body">
+        <div class="header">
+          <h2>Wishlist</h2>
         </div>
-      </section>
+        <div class="list-item">
+          <div class="items">
+            <div class="product-img">
+              <img src="img/shoppingoutline.png" alt="" />
+            </div>
+
+            <div class="info-wrapper">
+              <div class="product-name el"><span>Name: </span>Helena</div>
+              <div class="product-price el"><span>Price: </span>$200</div>
+            </div>
+            <div class="btn-wrapper">
+              <button class="product-link el">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <button class="bottom closeWishBtn">close</button>
+      </div>
     </section>
 
     <!-- hero section -->
     <section id="page-header">
-      <div class="search-box">
+      <div class="search-opt">
         <input
-          type="text"
-          placeholder="Search for products.."
+          class="search-opt-btn"
           id="searchInput"
-          required
-          autocomplete="false"
+          placeholder="Search Our Shop..."
         />
         <button id="searchBtn">Search</button>
       </div>
     </section>
 
+    
     <section id="prodetails" class="section-p1"></section>
 
     <section id="product1" class="section-p1">
+      <h2>Our Shop</h2>
+      <p>Summer Collection New Modern Design</p>
+
       <div class="product-container" id="shopPro"></div>
     </section>
 

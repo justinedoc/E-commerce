@@ -16,14 +16,15 @@ if (close) {
   });
 }
 
+
 const openCartBtn = document.querySelectorAll(".cartBtn");
 const closeCartBtn = document.querySelector(".closeWishBtn");
-const cartEl = document.getElementById("cart");
+const cartEl = document.querySelector(".cart-main-body");
 
 for (let i = 0; i < openCartBtn.length; i++) {
   openCartBtn[i].addEventListener("click", (event) => {
     event.preventDefault();
-    cartEl.classList.add("clicked");
+    cartEl.classList.add("clicked")
   });
 }
 

@@ -15,15 +15,14 @@ if (close) {
     nav.classList.remove("active");
   });
 }
-
 const openCartBtn = document.querySelectorAll(".cartBtn");
 const closeCartBtn = document.querySelector(".closeWishBtn");
-const cartEl = document.getElementById("cart");
+const cartEl = document.querySelector(".cart-main-body");
 
 for (let i = 0; i < openCartBtn.length; i++) {
   openCartBtn[i].addEventListener("click", (event) => {
     event.preventDefault();
-    cartEl.classList.add("clicked");
+    cartEl.classList.add("clicked")
   });
 }
 
@@ -57,7 +56,7 @@ const addPro = () => {
                 <h4 class="price">${data.featuredProducts[i].price}</h4>
               </div>
             </div>
-            <button class="cart" onclick="location.href='${data.featuredProducts[i].affliateLink}'">Buy</button>
+            <button class="cart cart-btn" onclick="location.href='${data.featuredProducts[i].affliateLink}'">Get</button>
           </div>`;
 
         const products = document.querySelectorAll(".img");
