@@ -16,7 +16,6 @@ if (close) {
   });
 }
 
-
 const openCartBtn = document.querySelectorAll(".cartBtn");
 const closeCartBtn = document.querySelector(".closeWishBtn");
 const cartEl = document.querySelector(".cart-main-body");
@@ -24,12 +23,17 @@ const cartEl = document.querySelector(".cart-main-body");
 for (let i = 0; i < openCartBtn.length; i++) {
   openCartBtn[i].addEventListener("click", (event) => {
     event.preventDefault();
-    cartEl.classList.add("clicked")
+    cartEl.classList.add("clicked");
   });
 }
 
 closeCartBtn.addEventListener("click", () => {
   cartEl.classList.remove("clicked");
+});
+
+document.getElementById("searchInput").addEventListener("click", () => {
+  console.log("c");
+  location.href = "/search.html";
 });
 
 const shopPro = document.getElementById("shopPro");
@@ -184,11 +188,11 @@ const displayPro = (products, data) => {
   }
 };
 
-const searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", () => {
-  prodetails.innerHTML = "";
-  prodetails.style.setProperty("display", "none");
-});
+// const searchBtn = document.getElementById("searchBtn");
+// searchBtn.addEventListener("click", () => {
+//   prodetails.innerHTML = "";
+//   prodetails.style.setProperty("display", "none");
+// });
 
 const wishNo = () => {
   const numberOfItems = document.querySelector(".number-items");

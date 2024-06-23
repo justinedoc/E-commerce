@@ -1,0 +1,143 @@
+.searched-product {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.searched-product .img-sec {
+  width: 20%;
+}
+
+.details-p {
+  display: none;
+}
+
+.img-sec img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.searched-product .des-sec {
+  width: 80%;
+}
+
+.des-sec h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.des-sec span {
+  line-height: 25px;
+}
+
+@media only screen and (max-width: 840px) {
+  .searched-product {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .searched-product .img-sec {
+    width: 200px;
+  }
+}
+
+.mobile .img-sec {
+  width: 250px;
+}
+
+.active {
+  display: block;
+}
+
+.mobile h4 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.mobile h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.searched-products.mobile {
+  padding: 15px;
+}
+
+.searched-product.mobile {
+  border: 1px solid #2222220f;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.searched-product .normal {
+  display: none;
+}
+
+.mobile.normal {
+  display: block;
+  background: #088178;
+  color: #fff;
+  padding: 9px 14px;
+}
+
+#searchBtn {
+  height: 50px;
+  padding: 0px 30px;
+  background: #088179;
+  color: #fff;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+body {
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  background: #00000032;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader i {
+  font-size: 5rem;
+  color: #088179;
+}
+
+@media only screen and (max-width: 480px) {
+  .searched-product {
+    margin-top: 5px;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .searched-product .des-sec {
+    width: 100%;
+  }
+
+  #searchBtn {
+    height: 50px;
+    padding: 0px 20px;
+    background: #088179;
+    color: #fff;
+    display: inline-block;
+    border: none;
+    outline: none;
+  }
+}
+

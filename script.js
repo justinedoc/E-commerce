@@ -31,59 +31,59 @@ closeCartBtn.addEventListener("click", () => {
 });
 
 // adding featured products
-const addPro = () => {
-  const featureProductsEl = document.getElementById("featuredPro");
-  fetch("products.json")
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data);
-      for (let i = 0; i < data.featuredProducts.length; i++) {
-        featureProductsEl.innerHTML += `
-        <div class="product">
-            <img class="img" src="${data.featuredProducts[i].img}" alt="" />
-            <div class="description">
-              <span>${data.featuredProducts[i].brand}</span>
-              <h5 class="name">${data.featuredProducts[i].name}</h5>
-              <div class="star">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-              <div class="psec">
-                <h4>$</h4>
-                <h4 class="price">${data.featuredProducts[i].price}</h4>
-              </div>
-            </div>
-            <button class="cart cart-btn" onclick="location.href='${data.featuredProducts[i].affliateLink}'">Get</button>
-          </div>`;
+// const addPro = () => {
+//   const featureProductsEl = document.getElementById("featuredPro");
+//   fetch("products.json")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       // console.log(data);
+//       for (let i = 0; i < data.featuredProducts.length; i++) {
+//         featureProductsEl.innerHTML += `
+//         <div class="product">
+//             <img class="img" src="${data.featuredProducts[i].img}" alt="" />
+//             <div class="description">
+//               <span>${data.featuredProducts[i].brand}</span>
+//               <h5 class="name">${data.featuredProducts[i].name}</h5>
+//               <div class="star">
+//                 <ion-icon name="star"></ion-icon>
+//                 <ion-icon name="star"></ion-icon>
+//                 <ion-icon name="star"></ion-icon>
+//                 <ion-icon name="star"></ion-icon>
+//                 <ion-icon name="star-outline"></ion-icon>
+//               </div>
+//               <div class="psec">
+//                 <h4>$</h4>
+//                 <h4 class="price">${data.featuredProducts[i].price}</h4>
+//               </div>
+//             </div>
+//             <button class="cart cart-btn" onclick="location.href='${data.featuredProducts[i].affliateLink}'">Get</button>
+//           </div>`;
 
-        const products = document.querySelectorAll(".img");
-        displayPro(products, data);
-        const mainCartEl = document.querySelector(".wish-items");
-        const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
-        for (let b = 0; b < addToCartBtn.length; b++) {
-          addToCartBtn[b].addEventListener("click", (event) => {
-            event.preventDefault();
-            console.log("clicked");
-            mainCartEl.innerHTML += `
-            <div class="item">
-            <i class="fa fa-times-circle remove-item"></i>
-            <img src="${data.featuredProducts[b].img}" alt="" />
-            <div class="des">
-              <h4 class="item-name">${data.featuredProducts[b].name}</h4>
-              <h6 class="price">$${data.featuredProducts[b].price}</h6>
-            </div>
-          </div>`;
-            const removeItem = document.querySelectorAll(".remove-item");
-            wishNo();
-            removeItemsFromWish(removeItem);
-          });
-        }
-      }
-    });
-};
+//         const products = document.querySelectorAll(".img");
+//         displayPro(products, data);
+//         const mainCartEl = document.querySelector(".wish-items");
+//         const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
+//         for (let b = 0; b < addToCartBtn.length; b++) {
+//           addToCartBtn[b].addEventListener("click", (event) => {
+//             event.preventDefault();
+//             console.log("clicked");
+//             mainCartEl.innerHTML += `
+//             <div class="item">
+//             <i class="fa fa-times-circle remove-item"></i>
+//             <img src="${data.featuredProducts[b].img}" alt="" />
+//             <div class="des">
+//               <h4 class="item-name">${data.featuredProducts[b].name}</h4>
+//               <h6 class="price">$${data.featuredProducts[b].price}</h6>
+//             </div>
+//           </div>`;
+//             const removeItem = document.querySelectorAll(".remove-item");
+//             wishNo();
+//             removeItemsFromWish(removeItem);
+//           });
+//         }
+//       }
+//     });
+// };
 addPro();
 
 const displayPro = (products, data) => {
