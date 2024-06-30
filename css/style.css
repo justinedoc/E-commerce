@@ -107,7 +107,7 @@ body {
 .search-box {
   display: flex;
   width: 50vw;
-  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   background: #fff;
   margin: auto auto;
@@ -115,7 +115,7 @@ body {
 }
 
 .search-box input {
-  width: 75%;
+  width: 90%;
   padding: 16px 20px;
   height: auto;
   background: transparent;
@@ -124,24 +124,21 @@ body {
   font-size: 1rem;
 }
 
-.search-box button {
-  width: 26%;
+.search-box i {
   border: none;
   outline: none;
   border-radius: inherit;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: #fff;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
 }
 
-
 .search-box button:hover {
   background: #465b52;
   scale: 0.96;
 }
-
 
 #header {
   display: flex;
@@ -204,7 +201,7 @@ body {
 /* hero */
 
 #hero {
-  background-image: url(img/hero4.png);
+  background-image: url(../img/hero4.png);
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -225,7 +222,7 @@ body {
 }
 
 #hero button {
-  background-image: url("img/button.png");
+  background-image: url("../img/button.png");
   background-color: transparent;
   color: #088178;
   border: 0;
@@ -320,6 +317,62 @@ body {
   border-radius: 20px;
 }
 
+#product1 .product .wrapper {
+  width: 100%;
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.wishlist-item-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 20;
+  background: #0000000e;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+#product1 .product .wrapper:hover .wishlist-item-btn {
+  opacity: 1;
+}
+
+.wishlist-item-btn button {
+  width: 140px;
+  height: 7vh;
+  border-radius: 10px;
+  border: 1px solid #ffffff0d;
+  background: #088178;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.5s ease;
+  scale: 0.7;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #89898d30;
+  height: 50vh;
+}
+
+.loading i {
+  font-size: 3.3rem;
+  color: #818ea0;
+}
+
+
+#product1 .product .wrapper:hover .wishlist-item-btn button {
+  scale: 1;
+}
+
 .hidden {
   width: 0%;
   min-width: 0px;
@@ -354,7 +407,7 @@ body {
 }
 
 #product1 .product .description h5 {
-  padding-top: 7px;
+  padding-top: 5px;
   color: #1a1a1a;
   font-size: 14px;
 }
@@ -369,25 +422,6 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: #088178;
-}
-
-#product1 .product .cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 20px;
-  border-radius: 6px;
-  background-color: #e8f6ea;
-  font-weight: 500;
-  color: #088178;
-  border: 1px solid #cce7d0;
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  font-size: 16px;
-  padding: 6px;
-  cursor: pointer;
-  transition: 300ms ease-in-out;
 }
 
 #product1 .product ion-icon.cart {
@@ -421,7 +455,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("img/banner/b2.jpg");
+  background-image: url("../img/banner/b2.jpg");
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -459,7 +493,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("img/banner/b17.jpg");
+  background-image: url("../img/banner/b17.jpg");
   min-width: 550px;
   height: 50vh;
   background-size: cover;
@@ -468,7 +502,7 @@ body {
 }
 
 #sm-banner .banner-box2 {
-  background-image: url(img/banner/b10.jpg);
+  background-image: url(../img/banner/b10.jpg);
 }
 
 #sm-banner h4 {
@@ -514,7 +548,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("img/banner/b7.jpg");
+  background-image: url("../img/banner/b7.jpg");
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -543,11 +577,11 @@ body {
 }
 
 #banner3 .banner-box2 {
-  background-image: url("img/banner/b4.jpg");
+  background-image: url("../img/banner/b4.jpg");
 }
 
 #banner3 .banner-box3 {
-  background-image: url("img/banner/b18.jpg");
+  background-image: url("../img/banner/b18.jpg");
 }
 
 #newsletter {
@@ -555,7 +589,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url(img/banner/b14.png);
+  background-image: url(../img/banner/b14.png);
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: #041e42;
@@ -670,18 +704,15 @@ footer .copyright {
 /* shop Page  */
 
 #page-header {
-  background-image: url(img/banner/b1.jpg);
+  background-image: url(../img/banner/b1.jpg);
   width: 100%;
-  height: 15vh;
-  background-size: cover;
+  height: 30vh;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
   padding: 14px;
-  border-radius: 0 0 20px 20px;
-  position: sticky;
-  top: 13%;
-  left: 0;
-  z-index: 100;
 }
 
 #page-header h2,
@@ -775,7 +806,7 @@ footer .copyright {
 /* blog page  */
 
 #page-header.blog-header {
-  background-image: url("img/banner/b19.jpg");
+  background-image: url("../img/banner/b19.jpg");
 }
 
 #blog {
@@ -845,7 +876,7 @@ footer .copyright {
 /* about page  */
 
 #page-header.about-header {
-  background-image: url("img/about/banner.png");
+  background-image: url("../img/about/banner.png");
 }
 
 #about-head {
@@ -1260,11 +1291,11 @@ footer .copyright {
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   #hero {
@@ -1283,16 +1314,53 @@ footer .copyright {
   }
 
   #product1 .product {
-    width: 100%;
+    width: 23%;
+    min-width: 160px;
+    padding: 10px 8px;
+    margin: 0 0;
+    border-radius: 15px;
   }
 
-  #product1 .product .cart {
-    display: inline-block;
-    width: fit-content;
-    height: auto;
-    font-weight: 500;
-    font-size: 15px;
-    padding: 6px;
+  #product1 .product img {
+    width: 100%;
+    border-radius: 15px;
+    height: 25vh;
+    object-fit: cover;
+  }
+
+  .wishlist-item-btn button {
+    width: 100px;
+    height: 5vh;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  #product1 .product .description ion-icon {
+    font-size: 12px;
+  }
+
+  .star {
+    margin-top: 2px;
+  }
+
+  #product1 .product .description {
+    text-align: start;
+    padding: 4px 0;
+  }
+
+  #product1 .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-left: 0px;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #89898d30;
+    height: 35vh;
   }
 
   #banner {
@@ -1436,5 +1504,15 @@ footer .copyright {
   #subtotal {
     width: 100%;
     padding: 20px;
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  #product1 .product .description h4 {
+    padding-top: auto;
+    font-size: 14px;
   }
 }

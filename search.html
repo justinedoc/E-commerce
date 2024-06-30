@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="search.css" />
-    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/cart.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <script
+      defer
       src="https://kit.fontawesome.com/c76b9e77b5.js"
       crossorigin="anonymous"
     ></script>
@@ -78,99 +82,50 @@
             id="searchInput"
             placeholder="Search Our Shop..."
           />
-          <button id="searchBtn">Search</button>
+          <i class="bx bx-search" id="searchBtn"></i>
         </div>
       </div>
     </section>
 
-    <section class="searched-products mobile">
-      <ul class="searched-product mobile">
-        <div class="img-sec mobile">
-          <img src="img/products/f1.jpg" alt="" />
+    <section id="product1" class="section-p1">
+      <div class="product-container" id="shopPro">
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-
-        <div class="des-sec mobile">
-          <h4 class="productname">Men's Fashion T-Shirts</h4>
-          <h2>$139.00</h2>
-
-          <div class="details-p active">
-            <h4>Product Details</h4>
-            <span
-              >The Gildan Ultra Cotton T-shirt is made from a substantial 6.0
-              oz. per sq. yd. fabric constructed from 100% cotton, this classic
-              fit preshrunk jersey knit provides umatched comfort with each
-              wear.
-            </span>
-          </div>
-          <button class="normal">Veiw</button>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-      </ul>
-      <ul class="searched-product mobile">
-        <div class="img-sec mobile">
-          <img src="img/products/f1.jpg" alt="" />
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-
-        <div class="des-sec mobile">
-          <h4 class="productname">Men's Fashion T-Shirts</h4>
-          <h2>$139.00</h2>
-
-          <div class="details-p active">
-            <h4>Product Details</h4>
-            <span
-              >The Gildan Ultra Cotton T-shirt is made from a substantial 6.0
-              oz. per sq. yd. fabric constructed from 100% cotton, this classic
-              fit preshrunk jersey knit provides umatched comfort with each
-              wear.
-            </span>
-          </div>
-          <button class="normal">Veiw</button>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-      </ul>
-      <ul class="searched-product mobile">
-        <div class="img-sec mobile">
-          <img src="img/products/f1.jpg" alt="" />
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-
-        <div class="des-sec mobile">
-          <h4 class="productname">Fashion T-Shirts</h4>
-          <h2>$139.00</h2>
-
-          <div class="details-p active">
-            <h4>Product Details</h4>
-            <span
-              >The Gildan Ultra Cotton T-shirt is made from a substantial 6.0
-              oz. per sq. yd. fabric constructed from 100% cotton, this classic
-              fit preshrunk jersey knit provides umatched comfort with each
-              wear.
-            </span>
-          </div>
-          <button class="normal">Veiw</button>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-      </ul>
-      <ul class="searched-product mobile">
-        <div class="img-sec mobile">
-          <img src="img/products/f1.jpg" alt="" />
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-
-        <div class="des-sec mobile">
-          <h4 class="productname">Polo</h4>
-          <h2>$139.00</h2>
-
-          <div class="details-p active">
-            <h4>Product Details</h4>
-            <span
-              >The Gildan Ultra Cotton T-shirt is made from a substantial 6.0
-              oz. per sq. yd. fabric constructed from 100% cotton, this classic
-              fit preshrunk jersey knit provides umatched comfort with each
-              wear.
-            </span>
-          </div>
-          <button class="normal">Veiw</button>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
         </div>
-      </ul>
+      </div>
     </section>
   </body>
 
-  <script src="search.js"></script>
-  <script src="script.js"></script>
+  <script type="module" type="module" src="src/search.js"></script>
+  <script type="module" src="src/script.js"></script>
+  <script type="module" src="src/cart.js"></script>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
 </html>
