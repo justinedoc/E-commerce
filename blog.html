@@ -7,6 +7,8 @@
     <title>Shop Site</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css" />
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,29 +23,55 @@
     <!-- header section -->
 
     <section id="header">
-
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
-
+        <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+  
         <div>
-
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a class="active" href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
-                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></i></a>
-
-            </ul>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a class="active" href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="icon-box">
+              <li id="lg-bag">
+                <a href="#" class="cartBtn"
+                  ><i class="fa-solid fa-bag-shopping"></i>
+                  <span class="number-items">0</span>
+                </a>
+              </li>
+            </div>
+            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+          </ul>
         </div>
-
+  
         <div id="mobile">
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-            <i id="bar" class="fa-solid fa-outdent"></i>
-
+          <a href="#" class="cartBtn"><i class="fa-solid fa-bag-shopping"></i></a>
+          <i id="bar" class="fa-solid fa-outdent"></i>
         </div>
-    </section>
+  
+        <div class="cart-main-body">
+          <div class="header">
+            <h2>Wishlist</h2>
+          </div>
+          <div class="list-item">
+            <div class="items">
+              <div class="product-img">
+                <img src="img/shoppingoutline.png" alt="" />
+              </div>
+  
+              <div class="info-wrapper">
+                <div class="product-name el"><span>Name: </span>Helena</div>
+                <div class="product-price el"><span>Price: </span>$200</div>
+              </div>
+              <div class="btn-wrapper">
+                <button class="product-link el">Checkout</button>
+              </div>
+            </div>
+          </div>
+          <button class="bottom closeWishBtn">close</button>
+        </div>
+      </section>
+         
 
 
     <!-- hero section -->
@@ -197,7 +225,7 @@
     </footer>
 
 
-    <script src="src/script.js"></script>
+    <script src="src/openCart.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

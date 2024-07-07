@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/c76b9e77b5.js"
       crossorigin="anonymous"
@@ -114,33 +118,30 @@
       <p>Summer Collection New Modern Design</p>
 
       <div class="product-container" id="featuredPro">
-        <template>
-          <div class="product">
-            <img class="img" src="img/products/f1.jpg" alt="" />
-            <div class="description">
-              <span>adidas</span>
-              <h5 class="name">Cartoon onaut T-Shirts</h5>
-              <div class="star">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-              <div class="psec">
-                <h4>$</h4>
-                <h4 class="price">78</h4>
-              </div>
-            </div>
-            <a href="#"
-              ><ion-icon
-                name="cart-outline"
-                aria-hidden="true"
-                class="cart"
-              ></ion-icon
-            ></a>
-          </div>
-        </template>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
       </div>
     </section>
 
@@ -157,6 +158,33 @@
       <p>Summer Collection New Modern Design</p>
 
       <!--  -->
+
+      <div class="product-container" id="newArrivals">
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+        <div class="product loading">
+          <i class="bx bx-loader-alt bx-spin"></i>
+        </div>
+      </div>
     </section>
 
     <section id="sm-banner" class="section-p1">
@@ -170,7 +198,7 @@
         <h4>Summer</h4>
         <h2>upcoming season</h2>
         <span>the best classic dress on sale at cara</span>
-        <button>Collection</button>
+        <button id="summerClothes">Collection</button>
       </div>
     </section>
 
@@ -257,7 +285,8 @@
       </div>
     </footer>
 
-    <script src="src/script.js"></script>
+    <script type="module" src="src/script.js"></script>
+    <script src="src/openCart.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
