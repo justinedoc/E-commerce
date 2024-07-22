@@ -333,7 +333,7 @@ body {
   z-index: 20;
   background: #0000000e;
   height: 100%;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   opacity: 0;
 }
 
@@ -342,14 +342,14 @@ body {
 }
 
 .wishlist-item-btn button {
-  width: 140px;
+  width: 150px;
   height: 7vh;
-  border-radius: 10px;
+  border-radius: 5px 10px 5px 10px;
   border: 1px solid #ffffff0d;
   background: #088178;
   color: #fff;
   font-size: 16px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   scale: 0.7;
   margin-top: auto;
   margin-bottom: 20px;
@@ -1330,8 +1330,8 @@ footer .copyright {
 
   .wishlist-item-btn button {
     width: 100px;
-    height: 5vh;
-    border-radius: 4px;
+    height: 5.3vh;
+    border-radius: 5px 10px 5px 10px;
     font-size: 14px;
   }
 

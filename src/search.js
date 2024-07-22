@@ -131,7 +131,12 @@ const displayProduct = (products) => {
   products.forEach((item) => {
     productElSec.innerHTML += `
     <div class="product">
-            <img class="img" src="${item.productImg}" alt="" />
+           <div class="wrapper">
+        <div class="wishlist-item-btn">
+          <button class="addToCartBtn">wishlist</button>
+        </div>
+          <img class="img" src="${products[i].productImg}" alt="" />
+      </div>
             <div class="description">
               <span>${item.productBrand}</span>
               <h5 class="name">${item.productName}</h5>
@@ -157,7 +162,12 @@ const loadProductsInSearch = (products) => {
   for (let i = 0; i < products.length; i++) {
     productElSec.innerHTML += `
     <div class="product">
-            <img class="img" src="${products[i].productImg}" alt="" />
+            <div class="wrapper">
+        <div class="wishlist-item-btn">
+          <button class="addToCartBtn">wishlist</button>
+        </div>
+          <img class="img" src="${products[i].productImg}" alt="" />
+      </div>
             <div class="description">
               <span>${products[i].productBrand}</span>
               <h5 class="name">${products[i].productName}</h5>
