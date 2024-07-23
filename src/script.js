@@ -9,7 +9,7 @@ let addToCartBtn = [];
 const cart = [];
 
 const loadProOnFeatured = (products) => {
-  console.log(products);
+  // console.log(products);
   productElSec.innerHTML = ``;
   for (let i = 0; i < products.length; i++) {
     productElSec.innerHTML += `

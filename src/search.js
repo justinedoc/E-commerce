@@ -30,7 +30,10 @@ const productDetails = document.querySelectorAll(".details-p");
 const viewBtn = document.querySelectorAll(".normal");
 const loadingIcon = document.querySelector(".loader");
 const searchedProductsEl = document.querySelector(".searched-products");
-const productElSec = document.getElementById("shopPro");
+const productElSec = document.getElementById("shopPro"),
+  addToCartClass = "addToCartBtn";
+let addToCartBtn = [];
+const cart = [];
 
 const mediaQuery = () => {
   if (window.screen.availWidth < 450) {
@@ -87,18 +90,19 @@ const loadProducts = (data, input) => {
 };
 
 async function isLoading(input) {
-  const products = [];
+  // const products = [];
   const loadEl = document.querySelector(".loader");
   loadEl.style.setProperty("display", "block");
   try {
     await onValue(colRef, (snapshot) => {
+      const products = [];
       snapshot.forEach((child) => {
         const chlidData = child.val();
         products.push(chlidData);
       });
+      loadProducts(products, input);
+      loadEl.style.setProperty("display", "none");
     });
-    loadProducts(products, input);
-    loadEl.style.setProperty("display", "none");
   } catch (error) {
     console.log(`error ${error} was encountered while fetching the data`);
   }
@@ -133,9 +137,9 @@ const displayProduct = (products) => {
     <div class="product">
            <div class="wrapper">
         <div class="wishlist-item-btn">
-          <button class="addToCartBtn">wishlist</button>
+          <button class="affiliate-link" onclick="window.location.href='${item.productAffiliateLink}'">check</button>
         </div>
-          <img class="img" src="${products[i].productImg}" alt="" />
+          <img class="img" src="${item.productImg}" alt="" />
       </div>
             <div class="description">
               <span>${item.productBrand}</span>
@@ -157,37 +161,88 @@ const displayProduct = (products) => {
 };
 
 const loadProductsInSearch = (products) => {
-  // console.log("working", products);
   productElSec.innerHTML = ``;
   for (let i = 0; i < products.length; i++) {
     productElSec.innerHTML += `
     <div class="product">
-            <div class="wrapper">
+      <div class="wrapper">
         <div class="wishlist-item-btn">
-          <button class="addToCartBtn">wishlist</button>
+          <button class="${addToCartClass}">wishlist</button>
         </div>
           <img class="img" src="${products[i].productImg}" alt="" />
       </div>
-            <div class="description">
-              <span>${products[i].productBrand}</span>
-              <h5 class="name">${products[i].productName}</h5>
-              <div class="star">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-              <div class="psec">
-                <h4>$</h4>
-                <h4 class="price">${products[i].productPrice}</h4>
-              </div>
+      <div class="description">
+        <span>${products[i].productBrand}</span>
+        <h5 class="name">${products[i].productName}</h5>
+        <div class="star">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+        </div>
+        <div class="psec">
+          <h4>$</h4>
+          <h4 class="price">${products[i].productPrice}</h4>
+           <a href="${products[i].productAffiliateLink}" class="affiliate-link" style="display: none;"></a>
+        </div>
+      </div>
+    </div>`;
+  }
+  addToCartBtn.push(...document.querySelectorAll(".addToCartBtn"));
+};
+
+const addProToCart = (product) => {
+  const proName = product.querySelector(".name").textContent,
+    proPrice = product.querySelector(".price").textContent,
+    proImg = product.querySelector(".img").src,
+    affiliate_link = product.querySelector(".affiliate-link").href;
+  const productObj = {
+    name: proName,
+    price: proPrice,
+    img: proImg,
+    link: affiliate_link,
+  };
+  let cartInnerHtml = document.querySelector(".list-item");
+  const numOfItemsInCart = document.querySelectorAll(".number-items");
+  if (!cart.includes(productObj.name)) {
+    cart.push(productObj.name);
+    for (let el of numOfItemsInCart) {
+      el.textContent = cart.length;
+    }
+    cartInnerHtml.innerHTML += `
+       <div class="items">
+            <div class="product-img">
+              <img src="${productObj.img}" alt="" />
             </div>
-          </div>`;
+
+            <div class="info-wrapper">
+              <div class="product-name el"><span>Name: </span>${
+                productObj.name
+              }</div>
+              <div class="product-price el" style="${
+                window.screen.availWidth < 500 ? "display: none;" : ""
+              }"><span>Price: </span>$${productObj.price}</div>
+            </div>
+            <div class="btn-wrapper">
+              <button class="product-link el"  onclick="window.location.href='${
+                productObj.link
+              }'">Check</button>
+            </div>
+        <div/>`;
   }
 };
 
 getPro((products) => {
-  // console.log(products);
   loadProductsInSearch(products);
+  addToCartBtn = document.querySelectorAll(`.${addToCartClass}`);
+  addToCartBtn.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      let parentEl = event.target.closest(".product");
+      if (parentEl) {
+        let parentElClone = parentEl.cloneNode(true);
+        addProToCart(parentElClone);
+      }
+    });
+  });
 });
