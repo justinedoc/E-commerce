@@ -70,6 +70,12 @@ p {
   border-radius: 50%;
 }
 
+#mobile .icon-box span {
+  top: 0;
+  left: unset;
+  right: -25%;
+}
+
 .remove-item {
   cursor: pointer;
   color: #088178;
@@ -1335,7 +1341,7 @@ footer .copyright {
     font-size: 14px;
   }
 
-  #product1 .product .description ion-icon {
+  #product1 product .description ion-icon {
     font-size: 12px;
   }
 
